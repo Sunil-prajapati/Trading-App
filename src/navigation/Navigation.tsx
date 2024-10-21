@@ -2,8 +2,8 @@ import React from "react";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { useCustomTheme } from "./Theme";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "../screens/HomeScreen";
-import LoginScreen from "../screens/LoginScreen";
+import HomeScreen from "../screens/dashboard/HomeScreen";
+import LoginScreen from "../screens/auth/LoginScreen";
 import { navigationRef } from "../utils/NavigationUtils";
 
 const Stack = createNativeStackNavigator();
@@ -28,6 +28,7 @@ const Navigation = () => {
             screenOptions={() => ({
                 headerShown: false,
               })}
+              initialRouteName="LoginScreen"
             >
                 <Stack.Screen name="HomeScreen" component={HomeScreen}/>
                 <Stack.Screen name="LoginScreen" component={LoginScreen}/>
