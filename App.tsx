@@ -1,10 +1,10 @@
 import React from 'react'
 import Navigation from './src/navigation/Navigation'
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
+import {WEB_CLIENT_ID} from "@env"
 
 GoogleSignin.configure({
-  webClientId:
-    "128022651007-t8vse2hilvu7v50eetuae55fqvc9ou16.apps.googleusercontent.com",
+  webClientId:WEB_CLIENT_ID,
   forceCodeForRefreshToken: true,
   offlineAccess: false,
   iosClientId:
