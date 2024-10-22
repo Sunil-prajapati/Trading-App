@@ -6,13 +6,13 @@ import { FONTS } from '../../constants/Fonts'
 import { screenWidth, screenHeight,normalizeModerately } from '../../utils/Scaling'
 import LoginImageDark from "../../assets/images/login_dark_animation.png";
 import LoginImageLight from "../../assets/images/login_animation_light.png";
-import SocialLoginButton from '../../components/auth/SocialloginButton'
 import GoogleIcon from "../../assets/images/google.png";
 import Icon from "react-native-vector-icons/Ionicons";
 import TouchableText from '../../components/global/TouchableText'
 import { navigate } from '../../utils/NavigationUtils'
 import BottomText from '../../components/auth/BottomText'
-
+import SocialLoginButton from '../../components/auth/SocialLoginButton'
+import { signInWithGoogle } from '../../redux/SocialLogin'
 
 const LoginScreen = () => {
   const theme = useColorScheme()
@@ -34,12 +34,12 @@ const LoginScreen = () => {
         <SocialLoginButton
           icon={<Image source={GoogleIcon} style={styles.gimg} />}
           text="Continue with Google"
-          onPress={async () => {}}
+          onPress={() => signInWithGoogle()}
         />
         <SocialLoginButton
           icon={<Icon name="logo-apple" size={18} color="black" />}
           text="Continue with Apple"
-          onPress={async () => {}}
+          onPress={() => {}}
         />
         <TouchableText
           firstText="Use other email ID"
