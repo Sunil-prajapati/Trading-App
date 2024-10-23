@@ -4,6 +4,7 @@ import { useCustomTheme } from "./Theme";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "../screens/dashboard/HomeScreen";
 import LoginScreen from "../screens/auth/LoginScreen";
+import EmailScreen from "../screens/auth/EmailScreen";
 import { navigationRef } from "../utils/NavigationUtils";
 
 const Stack = createNativeStackNavigator();
@@ -32,6 +33,7 @@ const Navigation = () => {
             >
                 <Stack.Screen name="HomeScreen" component={HomeScreen}/>
                 <Stack.Screen name="LoginScreen" component={LoginScreen}/>
+                <Stack.Screen name="EmailScreen" component={EmailScreen}/>
             </Stack.Navigator>
         </NavigationContainer>
     )
